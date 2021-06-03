@@ -1,0 +1,21 @@
+1 Etapa do projeto
+
+criamos a pasta assets/images e colocamos as imagens
+no pubscpec.yaml setamos a pasta assets, as fonts e o http !!
+
+Criamos a pasta "core" dentro de lib e dentro dela criamos todos as coisas essenciais do projeto
+criamos o app_colos.dart = aonde colocamos nossas cores em strings
+criamos o app_gradiente.dart = aonde colocamos as cores gradient em uma classe
+criamos o app_images.dart = aonde definimos os caminhos da imagens em string para facilitar
+criamos o app_text_styles.dart = aonde definimos nossas fontes em string para facilitar
+criamos o app_widget.dart = aonde vamos colocando nossas telas e ele renderiza
+criamos o core.dart = aonde tem todos os imports acima para que quando importarmos o core.dart ele ja venha com todos os importes essenciais, ao invez de importa um por um !!!
+
+
+criamos a pasta splash aonde colocamos o main.dart que é nossa tela inicial !!
+criamos a pasta home dentro de lib para criar a tela de homepage
+dentro da pasta home tem os widgets ou seja, tudo que a home page precisa
+nela criamos a pasta appbar que dentro dem o app_bar_widget.dart que tem o nome do usuario e a foto dele.
+dentro da pasta home criamos o score_card que é aonde vai ter o grafico e um texto informando como esta indo
+dentro da pasta home criamos o chart é aonde é criado o grafico
+

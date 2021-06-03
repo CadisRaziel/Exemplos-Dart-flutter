@@ -1,0 +1,11 @@
+Etapa 3
+
+Nessa etapa criamos a pasta database, jogamos ela dentro dos assets para que o pubspec conseguisse encontrar ela (olha o pubspec)
+
+dentro da basta Database criamos 2 json para simular um usuario e outro json para criar a perguntas.
+
+
+criamos o Controller e o repository e nos Models modificamos para que ele pegasse os arquivos json !!
+Realizamos muitos "maps"
+
+Aprendemos tambem sobre gerenciamento de estado ou seja colocamos dados no json e pegamos ele e fizemos loading na tela

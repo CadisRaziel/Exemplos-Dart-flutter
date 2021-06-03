@@ -1,0 +1,15 @@
+Depois de criar o model, precisamos fazer ele interagir com os modelos da nossa aplicação
+
+
+//quando falamos de criar algum controlador normalmente vamos fazer algumas chamadas, algumas interações
+//porém para criar o controller precisamos criar algumas variaveis para armazenar as coisas
+
+O controller é responsavel -> pelo estado da nossa tela ou seja
+imagine que eu defini um botão circular para quando esta em standby sem interação do usuario
+e o mesmo botão quando o usuario clica ele fica retangular
+o controller é responsavel por deixar ele em standby circular !!
+
+Quando estamos criando uma aplicação devemos nos preocupar com 3 coisas :
+* O estado de sucesso
+* O estado de erro
+* O estado de loading

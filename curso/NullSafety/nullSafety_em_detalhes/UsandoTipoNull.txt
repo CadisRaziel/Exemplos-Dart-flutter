@@ -1,0 +1,18 @@
+repare esse exemplo
+
+bad(String? suaString){
+    print(suaString.length);
+}
+
+main() => bad(null);
+
+//lembre-se que a maioira dos metodos não podem ser chamados para tipos nullos
+//esse codigo vai dar erro pois estou tentando chamar um metodo para uma variavel null
+//porém podemos usar 3 metodos em nullo que são: toString(), ==, hashCode
+
+
+//Onde usar os tipos de variaveis nullable:
+leitura de maps(ler um valor presente em um map)
+Parametros Opcionais
+comparação de valores 
+interpolação de strings

@@ -1,0 +1,219 @@
+variaveis nullable = variaveis que aceita o null :
+Object?
+double?
+num?
+int?
+string?
+Iterable?
+bool?
+List?
+
+variaveis não nullable = variaveis que não aceitam null:
+Object
+double
+num
+int
+string
+Iterable
+bool
+List
+
+
+//utilizando o 'Late'
+imagine o seguinte cenario
+eu quero fazer um calculo somente depois com o calcule()
+declarando a variavel int dessa forma ele vai dar erro de null
+
+class inteiro{
+    int umInt;
+
+  inteiro(){
+      umInt = calcule();
+  }
+}
+
+//para nao der erro de null eu faço o Late
+ou seja o late espera que tenha um metodo logo em seguida para que a variavel umInt seja atribuido algum valor
+class inteiro{
+    Late int umInt;
+
+  inteiro(){
+      umInt = calcule();
+  }
+}
+
+ou seja o late precisa que o proximo metodo inicialize essa variavel !!!
+
+
+
+Quando eu declarar uma variavel com ?
+ela poderá ser nulla
+porém não vou consenguir chamar metodos com ela !!! 
+
+//============================================================
+//transformando variaveis nullable em non-nullable :
+//ou seja isso vai deixar as variaveis impossiveis de ser nullas
+
+Manipule valores nulos = ?? if !|as ?.
+
+
+
+
+
+//se a variavel for nula o ?? coloca o valor 0 nela !!
+//se ela não for nula ele vai colocar diretamente na variavel non-nullable
+exemplo1: int value = intNullable ?? 0;
+
+
+
+
+//um exemplo pouco usado utilizando o if
+//se a variavel for nulla ele retorna o 0
+//se a variavel nao for nulla ela retorna o proprio valor da variavel intNullable
+//o if vai dar o mesmo resultado do exemplo1
+//exemplo2:
+int umInt(int? intNullable){
+    if (intNullable == null) {
+        return 0;
+    }
+    return intNullable;
+}
+
+
+
+
+//exemplo3:
+int? intNullable = 1; //colocando o valor 1 eu tenho certeza que essa variavel não é nulla
+//tome cuidado com isso pois da muito erro pois ela é feita em tempo de execução
+
+//use apenas o ! quando tiver certeza de que o valor não é nulo !!!!
+
+
+
+//exemplo4:
+//se o seuNum() for um nullable e eu quiser transformar ele em um int non-nullable eu uso o 'as int'
+//é parecido com o !
+//esse exemplo mostra como converter um tipo nullable(num?) para o int !!
+//é feito em tempo de execução então tenha certeza de que o valor não é nullo !!!!
+return seuNum() as int;
+
+
+
+
+//exemplo5:
+//repare que Pessoa é um objeto e estou usando o ? nele
+//?. funciona como o . mas permite que o objeto seja nulo
+//usado mais para detectar se a variavel é nula ou não  
+//se ela for nula ele ignora o name()
+//se ela nao for nula ela chama o name()
+Pessoa? d;
+print(d?.name());
+
+
+
+//OBS: EVITE VARIAVEIS DO TIPO nullable o maximo possivel !
+
+
+//==================================================
+list = Lista de objetos
+map = Conjunto de chave-valor
+
+//OBS: a list nesse exemplo pode ser qualqeur tipo... int, double,string etc.. estamos usando string só para exemplo
+    tipo          a lista pode ser nula?        Pode ter um item nullo?
+List<String>             Não                            Não
+List<String>?            Sim                            Não(não posso armazenar nenhum nulo na lista!!!)
+list<String?>            Não                            Sim(posso armazenar um nulo na lista!!!)
+list<String?>?           Sim                            Sim(posso armazenar um nulo na lista!!!)
+
+exemplo:
+//quando nao tem ? do lado de fora como no exemplo 1 e 3 eu preciso inicializar a lista
+//quando o ? é do lado de dentro não preciso inicializar
+1º List<String> listaNaoNullItemNaoNull = [];
+2º List<String>? listaNullItemNaoNull;
+3º List<String?> listaNaoNullItemNull = [];
+4º List<String?>? listaNullItemNull;
+
+
+exemplo real: (string nulla)
+//antes eu podia passar null
+List<String> nomeList = ['Joao', null, 'Francisco'];
+
+//agora se eu colocar um null dentro da lista eu tenho que definir a string com ? para ela aceitar nulos
+//porém lembre-se tipo null não pode chamar metodos !!(exemplo se eu fizer um For vai dar erro !!)
+List<String?> nomeList = ['Joao', null, 'Francisco];
+
+
+exemplo real: (Lista nulla)
+//antes eu podia fazer isso
+//a lista pode ser nulla porém as strings não podem ser nulas (aqui daria um erro)
+List<String>? nomeList = ['Joao', null, 'Francisco'];
+
+//agora eu tenho que tirar a string null 
+//pois somente a lista pode ser nulla a String eu nao defini como nulla
+List<String>? nomeList = ['Joao', 'Francisco'];
+//porém repare esse ? aqui nao serve de nada
+//ele serve para eu fazer isso
+//caso eu queira declarar a lista logo no inicio sem valor eu faço isso
+List<String>? nomeList; (fazendo isso eu nao consigo fazer nada com essa lista, tome cuidado, porém para usala eu posso converter em non nullable)
+
+
+
+//==========================================
+maps:
+
+
+//OBS: O map nesse exemplo pode ser qualqeur tipo... int, double,string etc.. estamos usando string só para exemplo
+    tipo                 o map pode ser nulo?               Pode ter um item nullo?
+Map<String, int>                Não                                   Não*
+Map<String, int>?               Sim                                   Não*(não posso armazenar nenhum nulo na lista!!!)
+Map<String, int?>               Não                                   Sim(posso armazenar um nulo na lista!!!)
+Map<String, int?>?              Sim                                   Sim(posso armazenar um nulo na lista!!!)
+
+//repare que coloquei o nao com um asterisco Não*
+//o motivo é o seguinte, no map mesmo que sejam Non-nullable, os retornos ainda podem ser null 
+//isso é feito pois os app antigo retornam null e para não quebra-los eles fizeram essa forma
+
+exemplo real:
+Map<String, int> meuMap = {'a': 1, 'b': 2};
+meuMap['c'] = null;
+//aqui vai dar um erro pois estou tentando atribuir um valor nullo a um map que nao é nullable
+
+
+//para ele aceitar o null eu faço isso '?'
+Map<String, int?> meuMap = {'a': 1, 'b': 2};
+meuMap['c'] = null;
+
+
+exemolo real 2:
+Map<String, int>? meuMap = {'sete': 7, 'dez': null};
+//aqui vai dar erro pois eu defini o map como nullable e nao o valor int
+
+Map<String, int>? meuMap = {'sete': 7, 'dez': 10};
+//para deixar o map null eu preciso por as chaves e valores certinho
+//pórem o porque eu fazer o map null
+//eu posso declarar ele sem inicializar
+Map<String, int>? meuMap; 
+//porém nao posso fazer nada com ele, para poder usa-lo preciso transformar ele em non-nullable
+
+
+
+//lembre-se retorno de leitura de map é sempre nullable
+int valor = <String, int>{'sete': 7}['sete'];
+//aqui vai dar erro pois como ele vai retornar um null eu nao posso atribui-lo a uma variavel !!
+
+//maneiras dele atribuir o null a variavel
+'?' variavel nullable aceita null
+//se ele encontrar ele retorna o valor na variavel int?
+//se ele nao encontrar ele retorna null
+int? valor = <String, int>{'sete': 7}['sete'];
+
+'!' usamos quando temos certeza que o sete existe como no exemplo
+//so use o ! quando voce ter certeza que a chave que esta lendo existe !!!
+int valor = <String, int>{'sete': 7}['sete']!;
+
+'??' valor default, se ele encontrar o valor da chave ele apresenta ela
+//se ele nao encontrar ele coloca o valor default que eu defini como 0
+//aqui garantimos que ela nunca vai ter um valor nullo
+int valor = <String, int>{'sete': 7};
+...
+int valor = umMapa['sete']??0;

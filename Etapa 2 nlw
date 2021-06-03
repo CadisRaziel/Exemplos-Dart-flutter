@@ -1,0 +1,14 @@
+2 etapa do projeto
+
+
+Nessa etapa criamos a pasta "Challenge" e a pasta "Shared"
+
+dentro da pasta Shared colocamos um widget que podera ser usado em diversos outros arquivos que seja igual a ele
+ou seja uma progress bar
+ao invez de ficar criando a mesma progress bar diversas vezes, criamos um modulo que colocamos ela com as cores que ela vai ter e sua animação !!
+e com isso podemos utiliza-la em outras pastas, outros modulos
+
+
+depois criamos a pasta Challenge que é a nossa tela de questões
+dentro dela criamos o modulo "challenge_page.dart" é onde sera renderizado todos os widgets que criaremos para ela
+, então criamos 3 subpastas que é a awnser(a aparencia dos blocos das perguntas, ou seja se o usuario clicar na certa fica verde, se clicar na errada fica vermelha...), question_indicator(que é pergunta que esta ou seja 3 de 10 e a progress bar) e a quiz(que são aonde colocaremos as perguntas)

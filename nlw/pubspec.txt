@@ -1,0 +1,9 @@
+repare que eu adicionei apenas essas duas dependencias no pubspec.yaml 
+pois eu preciso setar as fonts e as imagens !!!
+
+
+
+google_fonts: ^2.0.0
+ assets:
+    - assets/images/
+

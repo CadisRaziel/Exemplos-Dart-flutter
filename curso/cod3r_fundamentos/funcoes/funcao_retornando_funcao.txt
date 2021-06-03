@@ -1,0 +1,65 @@
+
+//esse exemplo é para mostrar a importancia de uma função retornando outra função
+//aqui temos uma função comun com 2 parametros 
+
+
+
+funcao(p1, p2){
+    //o parametro p1 demora 10s para processar
+    sentenca #01
+    sentenca #02
+    sentenca #03
+
+    //o parametro p2 demora 1s para processar
+    sentenca #01
+    sentenca #02
+}
+
+funcao(3, 17) // 11s para processar
+funcao(3, 39) // 11s para processar
+funcao(3, 92) // 11s para processar
+
+total: 33s
+
+
+
+
+//===========================================================================
+//agora veja esse mesmo exemplo só que com uma função retornando outra função
+
+como quebrei o algoritimo em duas partes, eu nao vou executar o algoritimo de uma vez quando eu chamar a função
+
+funcaoFora(p1){
+    //o parametro p1 demora 10s para processar
+    sentenca #01
+    sentenca #02
+    sentenca #03
+
+    return(p2){
+    //o parametro p2 demora 1s para processar
+    sentenca #01
+    sentenca #02  
+}
+
+//aqui o (3) é o p1
+//e o (17) é o p2
+funcaoFora(3)(17) //dessa forma continua 33s
+funcaoFora(3)(39) //dessa forma continua 33s
+funcaoFora(3)(92) //dessa forma continua 33s
+
+total: 33s
+
+
+//porém podemos fazer isso e ganharemos uma performance incrivel !!
+//armazenaremos o parametro de 10s em uma variavel
+var funcaoComParam = funcaoFora(3); //aqui continua 10s
+funcaoComParam(17) //porém aqui ja esta 1s
+funcaoComParam(39) //porém aqui ja esta 1s
+funcaoComParam(92) //porém aqui ja esta 1s
+
+total: 13s
+
+veja como consegui pre processar o p1 em uma variavel para otimizar o tempo
+e para passar o parametro p2 eu apenas chamo a variavel funcaoComParam e passo o p2 (17)
+
+
