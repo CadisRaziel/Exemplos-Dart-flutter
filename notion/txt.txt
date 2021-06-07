@@ -1,0 +1,5 @@
+notas sobre o .env
+
+o NOTION_DATABASE_ID= 29d91df67fe24bcd85801f076d9a697d
+para pegar essa key eu entrei na pagina que eu criei o Finanças e na url tem isso = https://www.notion.so/29d91df67fe24bcd85801f076d9a697d?v=5de4acbf28774583ac40431e26f5a2e3
+eu apenas peguei o que sem depois do so/ e antes do ? que é = 29d91df67fe24bcd85801f076d9a697d
