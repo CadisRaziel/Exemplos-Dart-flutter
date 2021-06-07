@@ -3,6 +3,7 @@ import 'package:ytclone/Icon/CustomSearchDelegate.dart';
 import 'package:ytclone/core/app_controller.dart';
 import 'package:ytclone/core/app_images.dart';
 
+
 //repare nesse import, eu estou importando tudo que eu exportei de dentro de Screen
 //se eu nao fizesse isso iria ter 4 imports aqui gerando mais codigo que o necessario
 import 'Screens/export.dart';

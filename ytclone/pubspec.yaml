@@ -24,10 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-
-  #precisamos dessas 2 dependencias, a flutter_youtube para poder reproduzir os videos e o http para consumir api
-  flutter_youtube: ^2.0.0+1
   http: ^0.13.3
+
 
 dev_dependencies:
   flutter_test:

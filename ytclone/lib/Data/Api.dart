@@ -21,7 +21,7 @@ class Api {
                 '&maxResults=20'
                 '&order=date'
                 '&key=$CHAVE_YOUTUBE_API'
-                //'&channelId=$ID_CHANNEL_CANAL' //se eu remover o channelId eu pego os videos da homepage do youtube akeatiruis
+                // '&channelId=$ID_CHANNEL_CANAL' //se eu remover o channelId eu pego os videos da homepage do youtube akeatiruis
                 '&q=$pesquisa') //esse pesquisa é quando entramos no canal e ele tem o campo 'pesquisa' repare que não passamos nada de parametro !
         );
 
@@ -32,7 +32,8 @@ class Api {
           //preciso criar esse map para converter para Json
           (map) {
         return Video.fromJson(map);
-      }).toList();
+      }
+      ).toList();
       //colocando o return videos aqui eu posso acessa-lo ali dentro do parametro api.pesquisar(''); na tela de inicio
       return videos;
     } else {
