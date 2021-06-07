@@ -39,6 +39,7 @@ class _InicioState extends State<Inicio> {
   @override
   //atualiza nossa tela
   //ou quando abrimos uma nova tela ele é chamado tambem (exemp se eu clicar no icone de procurar ele é chamado, se eu clico na seta de voltar ele é chamado)
+  //poderia tambem salvar o que o usuario estava fazendo para que quando ele voltar ainda os dados estiver la
   void didUpdateWidget(covariant Inicio oldWidget) {    
     super.didUpdateWidget(oldWidget);
   }
