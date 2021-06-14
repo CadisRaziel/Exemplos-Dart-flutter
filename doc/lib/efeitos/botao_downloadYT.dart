@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+
+///Quando eu coloco o Immutable eu estou sinalizando que nessa classe vai ter apenas variaveis static, final e const
+///e que eu nao devo colocar variveis que podem alterar seu valor nela !
+///mesmo eu tentanto colocar variaveis comuns o constructor não vai deixar eu assimila-la la dentro !
+///RESUMUNDO IMMUTABLE = SÓ ACEITA STATIC, FINAL E CONST 
+///E SOU EU O PROGRAMADOR QUE DECIDO SE VOU COLOCAR IMMUTABLE OU NÃO POR ISSO VEJA BEM O QUE A CLASS VAI FAZER !
+@immutable
 class ButtonDownload extends StatefulWidget {
   //para conseguirmos acessar essa final la na construção da tela precisamos por widget antes
   final Color primaryColor;
