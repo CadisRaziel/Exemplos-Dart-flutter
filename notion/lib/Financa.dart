@@ -46,11 +46,15 @@ class _FinancaState extends State<Financa> {
                 return ListView.builder(
                     itemCount: items.length + 1,
                     itemBuilder: (BuildContext context, int index) {
+                      //print para ver os itens que tenho disponivel
+                      // print('${items['index -1']}');
                       //se o indice for zero retornarmos o indice de grafico
                       if (index == 0) return SpendingChart(items: items);
 
                       //como eu incremento +1 ali em cima, aqui eu preciso colocar -1
-                      final item = items[index - 1];
+                      //precisso instanciar a classe Item para eu ver os itens diponiveis (exp: item.'name')
+                      final Item item = items[index - 1];
+
                       return Container(
                         margin: const EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
@@ -71,6 +75,8 @@ class _FinancaState extends State<Financa> {
                           //lembre-se as vezes ao colocar o . o parametro não é exibido, mas mesmo colocando parametro da certo
                           title: Text(
                             item.name,
+                            //posso fazer operação ternaria
+                            // item.name == 'Vitor' ? 'Condição verdadeira' : item.name,
                           ),
                           //para utilizarmos o subtitle que é a data e hora precisamos usar o (intl) que colocamos na dependencias
                           //para transforma-los em string

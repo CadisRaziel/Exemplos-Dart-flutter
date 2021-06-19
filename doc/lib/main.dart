@@ -1,4 +1,6 @@
-import 'package:doc/efeitos/HomePageYT.dart';
+import 'package:doc/Animacoes/Animacao_container/container.dart';
+
+
 import 'package:flutter/material.dart';
 
 
@@ -14,11 +16,7 @@ class MyApp extends StatelessWidget {
     //esse final foi usado no exemplo Animacao_fade
     // final paramTitle = 'Parametro criado na MyHomePage';
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Aprendendo a DOC',
-        theme: ThemeData(
-          primaryColor: Colors.white,
-        ),
-        home: HomePage());
+        debugShowCheckedModeBanner: false,        
+        home: AnimatedContainerApp());
   }
 }

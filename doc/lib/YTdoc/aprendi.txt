@@ -1,0 +1,1 @@
+nesse exemplo eu aprendi a mescar um FAB com o BottonNavigator

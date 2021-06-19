@@ -21,7 +21,7 @@ class SpendingChart extends StatelessWidget {
         ifAbsent: () => item.preco));
 
     return Card(
-      margin: const EdgeInsets.all(8.0),
+      margin: const EdgeInsets.all(8.0),  
       elevation: 2.0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
       child: Container(
@@ -61,3 +61,10 @@ class SpendingChart extends StatelessWidget {
     );
   }
 }
+
+
+
+//ifAbsent =  Para evitar que um erro seja lançado caso a chave não exista, ele coloca o valor apenas (atualiza o map)
+//ifAbsent =  Procura o valor da key ou adiciona um novo valor se ela nao existir
+//como no planilha eu coloquei o 'aleatorio' ele não vai ter uma chave como 'Comida, Entreterimento, Combustivel etc..'
+//ou seja ele coloca apenas o valor e coloca o titulo como eu defini no item_model =  categoria: properties['Categoria']?['select']?['name'] ?? 'Aleatório',

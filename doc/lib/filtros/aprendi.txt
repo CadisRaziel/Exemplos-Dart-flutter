@@ -1,0 +1,13 @@
+///IgnorePointer
+///VoidCallBack
+///Scrollable
+///PageScrollPhysics
+///Stack
+///PageController
+///AspectRatio
+///ClipOval
+///BlendMode
+///ValueListenableBuilder
+///ValueNotifier
+
+Aprendi sobre esses itens acima no projeto de filtros!

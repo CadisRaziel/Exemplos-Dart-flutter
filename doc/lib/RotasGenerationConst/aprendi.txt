@@ -1,0 +1,15 @@
+Nesse exemplo eu aprendi a criar Rotas e Subrotas sem a necessidade de usar um package para fazer o gerenciamento d estado
+
+const routeHome = '/';
+const routeSettings = '/settings';
+const routePrefixDeviceSetup = '/setup/';
+
+///Repare que as subrotas dao inicio aqui ! a partir do setup 
+const routeDeviceSetupStart = '/setup/$routeDeviceSetupStartPage';
+const routeDeviceSetupStartPage = 'find_devices';
+const routeDeviceSetupSelectDevicePage = 'select_device';
+const routeDeviceSetupConnectingPage = 'connecting';
+const routeDeviceSetupFinishedPage = 'finished';
+
+
+Obs: repare no 'main2.dart' é aonde esta todos os parametros criados e a condição usada para ver em qual pagina esta !

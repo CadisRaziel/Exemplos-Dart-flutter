@@ -65,7 +65,7 @@ class _InicioState extends State<Inicio> {
                 //instanciando o Video e a List<Video> eu achei mais facil para capturar os parametros !
                 List<Video> videos = snapshot.data;
                 Video video = videos[index];
-
+  
                 //gestureDetector para tanto a imagem quanto o titulo ser clicavel e abrir o video
                 return GestureDetector(
                   onTap: (){

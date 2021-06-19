@@ -16,7 +16,7 @@ Future<List<Photo>?> fetchPhoto() async {
     // Use a função compute para executar parsePhotos em um isolado separado.
     return compute(parsePhoto, response.body);
   } else {
-    throw Exception('Resquest API error');
+    throw Exception();
   }
 }
 

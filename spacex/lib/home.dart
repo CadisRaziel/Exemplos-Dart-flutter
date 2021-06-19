@@ -164,14 +164,12 @@ class _SpaceXState extends State<SpaceX> {
             fit: BoxFit.fitWidth,
           ),
         ),
-        child: Column(
-          children: [
-            GestureDetector(
-                onTap: _usandoNavigator, 
-                child: Image.asset(AppImages.rocket),
-                ),
-                Text('Clique na imagem para ir para a proxima tela', style: TextStyle(fontSize: 30),)
-          ],
+        child: Center(
+          child: Column(
+            children: [            
+                  Text('Contato', style: TextStyle(fontSize: 30),)
+            ],
+          ),
         ),
       );
 }

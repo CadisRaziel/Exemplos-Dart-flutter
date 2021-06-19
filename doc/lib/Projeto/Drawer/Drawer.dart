@@ -18,6 +18,7 @@ class _ExampleDrawerState extends State<ExampleDrawer> {
         drawer: Drawer(
           child: ListView(
             children: [
+              ///DrawerHeader = Conseguimos customizar o AppBar do drawer!!!
               DrawerHeader(
                 decoration: BoxDecoration(
                   color: Colors.amber,
@@ -45,3 +46,8 @@ class _ExampleDrawerState extends State<ExampleDrawer> {
     );
   }
 }
+
+
+///Drawer
+///DrawerHeader
+///ListTile
